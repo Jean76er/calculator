@@ -15,15 +15,18 @@ public class GUI implements ActionListener{
     public GUI() {
         frame = new JFrame();
         panel = new JPanel();
-        label = new JLabel("Coutnter 0");
-        JButton button = new JButton("Press");
+        label = new JLabel("Counter 0");
+        JButton buttonOne = new JButton("1");
+        JButton buttonTwo = new JButton("2");
 
         panel.setBorder(BorderFactory.createEmptyBorder(100, 100, 100, 100));
         panel.setLayout(new GridLayout(0, 1));
-        panel.add(button);
+        panel.add(buttonOne);
+        panel.add(buttonTwo);
         panel.add(label);
 
-        button.addActionListener(this);
+        buttonOne.addActionListener(this);
+        buttonTwo.addActionListener(this);
 
         frame.setTitle("First");
         frame.add(panel, BorderLayout.CENTER);
@@ -31,6 +34,7 @@ public class GUI implements ActionListener{
         frame.pack();
         frame.setVisible(true);
     }
+    
 
     @Override
     public void actionPerformed(ActionEvent e) {
