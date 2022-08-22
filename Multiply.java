@@ -1,5 +1,5 @@
 public class Multiply {
-    public static int multiply(int numA, int numB) {
+    public static double multiply(double numA, double numB) {
         return numA * numB;
     }
 }

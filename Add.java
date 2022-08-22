@@ -1,5 +1,5 @@
 public class Add {
-    public static int add(int numA, int numB) {
+    public static double add(double numA, double numB) {
         return numA + numB;
     }
 }

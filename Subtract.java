@@ -1,5 +1,5 @@
 public class Subtract {
-    public static int subtract(int numA, int numB) {
+    public static double subtract(double numA, double numB) {
         return numA - numB;
     }
 }
