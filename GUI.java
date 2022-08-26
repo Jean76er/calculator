@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GUI implements ActionListener{
+public class GUI implements ActionListener {
     private JLabel label;
     private JFrame frame;
     private JPanel buttonPanel;
@@ -255,16 +255,16 @@ public class GUI implements ActionListener{
         else if(e.getSource() == buttonEquals) {
             numB = Double.valueOf(display);
             this.display = "";
-            changeString(String.valueOf(Checker.checker(numA, numB, operator)));
+            changeString(String.valueOf(Checker.checker(numA, numB, operator))); 
         }
         else if(e.getSource() == buttonDeciamal) {
-            if(display.contains(".")) {
+            if(display.contains(".")) { //This checks if the value already contains a deciamal
                 this.display = "";
             }
             changeString(".");
         }
         else if(e.getSource() == buttonNegative) {
-            if(display.length() > 0) {
+            if(display.length() > 0) { //Makes sure that the negative is always at the start of a number
                 this.display = "";
             }
             changeString("-");
@@ -277,11 +277,7 @@ public class GUI implements ActionListener{
 
     }
 
-    public void changeString(String a) {
+    public void changeString(String a) { //Adds on to string.
         this.display = this.display.concat(a);
-    }
-
-    public static void main(String[] args) {
-        new GUI();
     }
 }
